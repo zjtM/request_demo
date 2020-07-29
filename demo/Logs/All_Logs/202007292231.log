@@ -1,0 +1,7 @@
+2020-07-29 22:31:41,822-test-INFO-test
+2020-07-29 22:31:41,822-test-ERROR-±®¥Ì–≈œ¢
+Traceback (most recent call last):
+  File "1.py", line 4, in <module>
+    r = 10/0
+ZeroDivisionError: division by zero
+2020-07-29 22:31:41,845-test-INFO-end
