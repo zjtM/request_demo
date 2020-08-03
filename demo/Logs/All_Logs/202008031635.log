@@ -1,0 +1,8 @@
+2020-08-03 16:35:57,072-test-INFO-写入section:login
+2020-08-03 16:35:57,075-test-INFO-写入login下的用户名是：测试
+2020-08-03 16:35:57,089-test-INFO-写入login下的密码是：一下
+2020-08-03 16:35:57,090-test-INFO-请求的url: 'www.baidu.com'test/test1
+2020-08-03 16:35:57,092-test-INFO-读取的用户名:测试
+2020-08-03 16:35:57,093-test-INFO-读取的密码:一下
+2020-08-03 16:35:57,095-test-INFO-删除login下的username
+2020-08-03 16:35:57,097-test-INFO-删除login下的password
