@@ -1,0 +1,18 @@
+2020-08-04 16:07:39,616-test-ERROR-Base_test-26-请求失败
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Demo_Test\python_demo\request_demo\demo\Common\Base_test.py", line 22, in get
+    response_json = result.json()
+  File "E:\myWork\tools\Anaconda3\lib\site-packages\requests\models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "E:\myWork\tools\Anaconda3\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "E:\myWork\tools\Anaconda3\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "E:\myWork\tools\Anaconda3\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2020-08-04 16:07:39,660-test-ERROR-test_weather-27-错误: 查询天气
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Demo_Test\python_demo\request_demo\demo\Test_Case\test_weather.py", line 18, in test_weather
+    status_code,response_json = weather.get(url)
+TypeError: cannot unpack non-iterable NoneType object

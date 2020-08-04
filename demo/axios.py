@@ -37,7 +37,10 @@ class TestRequests():
             print("请求方式错误!")
 
 if __name__ == "__main__":
-    # test= TestRequests()
+    test= TestRequests()
+    result = test.run_main('get',url='https://www.baidu.com')
+    print(result.url)
+
     # result = test.run_main('get',url='http://apis.juhe.cn/simpleWeather/query',params={'key':'331eab8f3481f37868378fcdc76cb7cd','city':'上海'})
     # print(result)
 #     test = TestRequests()
@@ -83,7 +86,7 @@ if __name__ == "__main__":
     #         del i['pId']
     # print(newArr)
 
-    excel = openpyxl.load_workbook(r'C:\Users\Administrator\Desktop\文档\工作报告.xlsx')
-    sheet = excel.get_sheet_by_name('Sheet2')
-    print(list(sheet.values))
+    # excel = openpyxl.load_workbook(r'C:\Users\Administrator\Desktop\文档\工作报告.xlsx')
+    # sheet = excel.get_sheet_by_name('Sheet2')
+    # print(list(sheet.values))
     
