@@ -1,4 +1,5 @@
 import Test_Case.test_weather
+import Common.my_email
 
 import unittest
 import HTMLTestRunnerCN
@@ -18,3 +19,5 @@ if __name__ == "__main__":
     )
     runner.run(suite)
     fp.close()
+
+    Common.my_email.mail()

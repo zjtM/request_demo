@@ -96,6 +96,7 @@ class webRequests(unittest.TestCase):
                 config.write(f)
             
     def config_delete(self,section,key=None,value=None):
+        #删除配置文件中的section
         config = configparser.ConfigParser()
         config.read(config_path,encoding='utf-8-sig')
         if key is not None:
@@ -106,3 +107,21 @@ class webRequests(unittest.TestCase):
             config.remove_section(section)
             with open(config_path,'w',encoding='utf-8') as f:
                 config.write(f)
+
+    def config_options(self,section):
+        #读取section下的所有键
+        config = configparser.ConfigParser()
+        config.read(config_path,encoding='utf-8-sig')
+        username = config.options(section)
+        return username
+
+    def config_addkey(self,user):
+        '''遍历获得配置文件收件人email'''
+        sum = 0
+        L = []
+        for i in user:
+            if sum < len(user):
+                emails = self.config_get('addressed', i)
+                L.append(emails)
+                sum += 1
+        return L
