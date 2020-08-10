@@ -38,8 +38,8 @@ table       { font-size: 100%; }
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-08-05 16:05:52</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.291818</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-08-10 11:39:36</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.001999</p>
 <p class='attribute'><strong>测试结果 : </strong> 共 1，错误 1，通过率= 0.00%</p>
 
 <p class='description'>描述</p>
@@ -82,7 +82,7 @@ table       { font-size: 100%; }
 </tr>
 
 <tr id='et1_1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_weather: 查询天气</div></td>
+    <td class='errorCase'><div class='testcase'>test_jock</div></td>
     <td colspan='5' align='center'>
     <!--默认收起output信息 -Findyou
     <button id='btn_et1_1' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_1'>错误</button>
@@ -94,9 +94,18 @@ table       { font-size: 100%; }
     <pre>
     
 et1_1: Traceback (most recent call last):
-  File "C:\Users\Administrator\Desktop\Demo_Test\python_demo\request_demo\demo\Test_Case\test_weather.py", line 18, in test_weather
-    status_code,response_json = weather.get(url)
-TypeError: cannot unpack non-iterable NoneType object
+  File "C:\Users\Administrator\Desktop\Demo_Test\python_demo\request_demo\demo\Test_Case\test_weather.py", line 35, in test_jock
+    jock.show('http://route.showapi.com/341-1','66412','c93eaee7efba40db8d10d41ede33dd9a')
+  File "C:\Users\Administrator\Desktop\Demo_Test\python_demo\request_demo\demo\Common\Base_test.py", line 28, in show
+    r = ShowapiRequest(url,appId=appId,appSecret=appSecret)
+TypeError: __init__() got an unexpected keyword argument 'appId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Demo_Test\python_demo\request_demo\demo\Test_Case\test_weather.py", line 38, in test_jock
+    log1.log('错误: %s' % case_name, exc_info=1)
+TypeError: log() missing 1 required positional argument: 'msg'
 
 
     </pre>

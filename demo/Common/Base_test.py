@@ -7,11 +7,30 @@ sys.path.append('..')
 from Logs.log import log1
 import getcwd
 import os
+from lib.ShowapiRequest import ShowapiRequest
+
+'''
+r = ShowapiRequest("http://route.showapi.com/341-1","my_appId","my_appSecret" )
+r.addBodyPara("page", "1")
+r.addBodyPara("maxResult", "20")
+res = r.post()
+print(res.text) # 返回信息
+'''
 
 path = getcwd.get_cwd()
 config_path = os.path.join(path,'Config/config.ini')
 
 class webRequests(unittest.TestCase):
+
+    def show(self,url,appId=None,appSecret=None,page='1',maxResult='20'):
+        #url 请求的地址
+        #appID 用户id
+        r = ShowapiRequest(url,appId=appId,appSecret=appSecret)
+        r.addBodyPara('page',page)
+        r.addBodyPara("maxResult", maxResult)
+        res = r.post()
+        print(res)
+        return res
 
     def get(self,url,params=None,headers=None,files=None):
         '''封装get方法，return响应码和相应内容'''

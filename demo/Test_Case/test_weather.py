@@ -26,3 +26,14 @@ class weather(unittest.TestCase):
         except BaseException as f:
             log1.error('错误: %s' % case_name, exc_info=1)
             raise
+
+    def test_jock(self):
+        case_name = '易源api'
+        log1.info('执行测试用例：%s' %case_name)
+        try:
+            jock = webRequests()
+            jock.show('http://route.showapi.com/341-1','66412','c93eaee7efba40db8d10d41ede33dd9a')
+
+        except BaseException:
+            log1.log('错误: %s' % case_name, exc_info=1)
+            raise

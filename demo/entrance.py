@@ -8,7 +8,7 @@ import getcwd
 
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(Test_Case.test_weather.weather('test_weather'))
+    suite.addTest(Test_Case.test_weather.weather('test_jock'))
     path = getcwd.get_cwd()
     file_path = os.path.join(path,'report/测试报告.html')
     fp = open(file_path,'wb')
@@ -20,4 +20,4 @@ if __name__ == "__main__":
     runner.run(suite)
     fp.close()
 
-    Common.my_email.mail()
+    #Common.my_email.mail()
